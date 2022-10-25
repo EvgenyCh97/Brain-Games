@@ -1,7 +1,6 @@
 import prompt
 from random import randint
 from brain_games.even.even_calc import is_even
-# from brain_games.even.even_calc import random_number
 
 
 def even_game_logic():
