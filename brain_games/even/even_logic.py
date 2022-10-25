@@ -15,7 +15,6 @@ def even_game_logic():
             print('Correct!')
             attempt += 1
         else:
-            print(f'''"{your_answer}" is wrong answer ;(. Correct answer was "{is_even(random_number)}".
-Let's try again, ''')
+            print(f'"{your_answer}" is wrong answer ;(. Correct answer was "{is_even(random_number)}". \nLet\'s try again, !')
             return
-    return
+    print('Congratulations, !')
