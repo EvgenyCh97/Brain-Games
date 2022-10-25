@@ -1,0 +1,19 @@
+import prompt
+from brain_games.even.even_calc import is_even
+from brain_games.even.even_calc import random_number
+
+
+def even_game_logic():
+    print('Answer "yes" if the number is even, otherwise answer "no".')
+    attempt = 0
+    while attempt < 3:
+        print(f'Question: {random_number}')
+        your_answer = prompt.string('Your answer: ')
+        if your_answer == is_even(random_number):
+            print('Correct!')
+            attempt += 1
+        else:
+            print(f'''"{your_answer}" is wrong answer ;(. Correct answer was "{is_even(random_number)}".
+Let's try again, ''')
+            return
+    return
