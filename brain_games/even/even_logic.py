@@ -1,6 +1,7 @@
 import prompt
 from random import randint
 from brain_games.even.even_calc import is_even
+from brain_games.cli import name_list
 
 
 def even_game_logic():
@@ -15,6 +16,6 @@ def even_game_logic():
             attempt += 1
         else:
             print(f'"{your_answer}" is wrong answer ;(. Correct answer was "{is_even(random_number)}".')
-            print(f'Let\'s try again, {}!')
+            print(f'Let\'s try again, {name_list[0]}!')
             return
-    print('Congratulations, !')
+    print(f'Congratulations, {name_list[0]}!')
