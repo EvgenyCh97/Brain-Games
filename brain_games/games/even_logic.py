@@ -1,6 +1,6 @@
 import prompt
 from random import randint
-from brain_games.even.even_calc import is_even
+from brain_games.games.even_calc import is_even
 from brain_games.cli import name_list
 
 
