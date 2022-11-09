@@ -2,7 +2,7 @@ from random import randint
 from brain_games.logic.game_logic import logic
 
 rules = 'What number is missing in the progression?'
-answer_list = [0]
+answer_list = ['']
 
 
 def get_progression():

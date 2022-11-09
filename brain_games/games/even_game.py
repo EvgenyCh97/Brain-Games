@@ -1,7 +1,7 @@
 from random import randint
 from brain_games.logic.game_logic import logic
 
-answer_list = [0]
+answer_list = ['']
 rules = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 

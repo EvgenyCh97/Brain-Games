@@ -2,7 +2,7 @@ from random import randint
 from brain_games.logic.game_logic import logic
 
 rules = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-answer_list = [0]
+answer_list = ['']
 numbers_list = list(range(1, 20))
 
 

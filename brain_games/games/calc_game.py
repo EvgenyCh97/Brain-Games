@@ -2,7 +2,7 @@ from random import randint, shuffle
 from brain_games.logic.game_logic import logic
 
 rules = 'What is the result of the expression?'
-answer_list = [0]
+answer_list = ['']
 operator_queue = [1, 2, 3]
 shuffle(operator_queue)
 
