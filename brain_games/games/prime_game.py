@@ -7,22 +7,22 @@ numbers_list = list(range(1, 21))
 
 
 def task():
-    random_number_from_list = randint(0, len(numbers_list) - 1)
-    number = numbers_list[random_number_from_list]
+    random_number_index = randint(0, len(numbers_list) - 1)
+    random_number = numbers_list[random_number_index]
     devisor = 2
-    if number == 1:
+    if random_number == 1:
         answer_list[0] = 'no'
-        numbers_list.pop(random_number_from_list)
-        return number
-    while number % devisor != 0:
+        numbers_list.pop(random_number_index)
+        return random_number
+    while random_number % devisor != 0:
         devisor += 1
-    if devisor == number:
-        numbers_list.pop(random_number_from_list)
+    if devisor == random_number:
+        numbers_list.pop(random_number_index)
         answer_list[0] = 'yes'
-        return number
-    numbers_list.pop(random_number_from_list)
+        return random_number
+    numbers_list.pop(random_number_index)
     answer_list[0] = 'no'
-    return number
+    return random_number
 
 
 def game():
