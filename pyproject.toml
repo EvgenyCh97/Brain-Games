@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = "This package contains the game Brain-Games, in which you have to solve simple math problems."
+description = "This package contains the game Brain Games, in which you have to solve simple math problems."
 authors = ["Евгений Чайка <chay67ka26@gmail.com>"]
 readme = "README.md"
 packages = [
