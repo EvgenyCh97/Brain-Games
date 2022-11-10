@@ -12,7 +12,8 @@ def logic(rules, task, answer_list):
             print('Correct!')
             attempt += 1
         else:
-            print(f'"{your_answer}" is wrong answer ;(. Correct answer was "{answer_list[0]}".')
-            print(f'Let\'s try again, {name_list[0]}!')
+            print(f'"{your_answer}" is wrong answer ;(.'
+                  f' Correct answer was "{answer_list[0]}".'
+                  f'\nLet\'s try again, {name_list[0]}!')
             return
     print(f'Congratulations, {name_list[0]}!')
