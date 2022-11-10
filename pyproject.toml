@@ -9,7 +9,7 @@ packages = [
 ]
 classifiers = [
     "Topic :: Games/Entertainment :: Puzzle Games",
-    "Operating System :: POSIX :: Linux"
+    "Operating System :: POSIX :: Linux",
     "Programming Language :: Python :: 3.8"
 ]
 repository = "https://github.com/EvgenyCh97/Brain-Games"
