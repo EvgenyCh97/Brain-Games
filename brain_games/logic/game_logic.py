@@ -1,8 +1,10 @@
 import prompt
-from brain_games.cli import name_list
 
 
 def logic(rules, task, answer_list):
+    print('Welcome to the Brain Games!')
+    name = prompt.string('May I have your name? ')
+    print(f'Hello, {name}!')
     print(rules)
     attempt = 0
     while attempt < 3:
@@ -14,6 +16,6 @@ def logic(rules, task, answer_list):
         else:
             print(f'"{your_answer}" is wrong answer ;(.'
                   f' Correct answer was "{answer_list[0]}".'
-                  f'\nLet\'s try again, {name_list[0]}!')
+                  f'\nLet\'s try again, {name}!')
             return
-    print(f'Congratulations, {name_list[0]}!')
+    print(f'Congratulations, {name}!')
