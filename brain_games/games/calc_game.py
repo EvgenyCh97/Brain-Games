@@ -1,5 +1,4 @@
 from random import randint, shuffle
-from brain_games.logic.game_logic import logic
 
 rules = 'What is the result of the expression?'
 answer_list = ['']
@@ -22,7 +21,3 @@ def task():
         answer_list[0] = str(first_number * second_number)
         operator_queue.pop(0)
         return f'{first_number} * {second_number}'
-
-
-def game():
-    logic(rules, task, answer_list)
