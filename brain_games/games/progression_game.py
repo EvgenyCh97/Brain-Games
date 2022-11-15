@@ -11,8 +11,8 @@ def get_progression_list():
     elements_count = length_of_progression * step_of_progression
     start_of_progression = randint(0, 100 - elements_count)
     end_of_progression = start_of_progression + elements_count
-    trimmed_list_of_numbers = LIST_OF_NUMBERS[start_of_progression:end_of_progression]
-    result_list = trimmed_list_of_numbers[::step_of_progression]
+    trimmed_list = LIST_OF_NUMBERS[start_of_progression:end_of_progression]
+    result_list = trimmed_list[::step_of_progression]
     return result_list
 
 
