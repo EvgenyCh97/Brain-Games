@@ -1,5 +1,4 @@
 from random import randint
-from brain_games.logic.game_logic import logic
 
 rules = 'What number is missing in the progression?'
 answer_list = ['']
@@ -28,7 +27,3 @@ def task():
         else:
             result += char + ' '
     return result
-
-
-def game():
-    logic(rules, task, answer_list)
