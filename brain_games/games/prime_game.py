@@ -1,5 +1,4 @@
 from random import randint
-from brain_games.logic.game_logic import logic
 
 rules = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 answer_list = ['']
@@ -23,7 +22,3 @@ def task():
     numbers_list.pop(random_number_index)
     answer_list[0] = 'no'
     return random_number
-
-
-def game():
-    logic(rules, task, answer_list)
