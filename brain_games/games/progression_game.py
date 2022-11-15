@@ -2,16 +2,17 @@ from random import randint
 
 RULES = 'What number is missing in the progression?'
 ANSWER_LIST = ['']
+LIST_OF_NUMBERS = list(map(str, range(1, 101)))
 
 
 def get_progression_list():
-    progression_step = randint(2, 4)
-    progression_len = randint(5, 10)
-    elements_count = progression_len * progression_step
-    progression_start = randint(0, 100 - elements_count)
-    progression_stop = progression_start + elements_count
-    str_list = list(map(str, range(1, 101)))
-    result_list = str_list[progression_start:progression_stop:progression_step]
+    step_of_progression = randint(2, 4)
+    length_of_progression = randint(5, 10)
+    elements_count = length_of_progression * step_of_progression
+    start_of_progression = randint(0, 100 - elements_count)
+    end_of_progression = start_of_progression + elements_count
+    trimmed_list_of_numbers = LIST_OF_NUMBERS[start_of_progression:end_of_progression]
+    result_list = trimmed_list_of_numbers[::step_of_progression]
     return result_list
 
 
