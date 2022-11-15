@@ -1,7 +1,7 @@
 from random import randint
 
-rules = 'Find the greatest common divisor of given numbers.'
-answer_list = ['']
+RULES = 'Find the greatest common divisor of given numbers.'
+ANSWER_LIST = ['']
 
 
 def task():
@@ -13,5 +13,5 @@ def task():
             first_number = first_number % second_number
         else:
             second_number = second_number % first_number
-    answer_list[0] = str(first_number + second_number)
+    ANSWER_LIST[0] = str(first_number + second_number)
     return f'{question_list[0]} {question_list[1]}'

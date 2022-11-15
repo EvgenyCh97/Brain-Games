@@ -1,24 +1,24 @@
 from random import randint
 
-rules = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-answer_list = ['']
-numbers_list = list(range(1, 21))
+RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+ANSWER_LIST = ['']
+NUMBERS_LIST = list(range(1, 21))
 
 
 def task():
-    random_number_index = randint(0, len(numbers_list) - 1)
-    random_number = numbers_list[random_number_index]
-    devisor = 2
+    random_number_index = randint(0, len(NUMBERS_LIST) - 1)
+    random_number = NUMBERS_LIST[random_number_index]
+    divisor = 2
     if random_number == 1:
-        answer_list[0] = 'no'
-        numbers_list.pop(random_number_index)
+        ANSWER_LIST[0] = 'no'
+        NUMBERS_LIST.pop(random_number_index)
         return random_number
-    while random_number % devisor != 0:
-        devisor += 1
-    if devisor == random_number:
-        numbers_list.pop(random_number_index)
-        answer_list[0] = 'yes'
+    while random_number % divisor != 0:
+        divisor += 1
+    if divisor == random_number:
+        NUMBERS_LIST.pop(random_number_index)
+        ANSWER_LIST[0] = 'yes'
         return random_number
-    numbers_list.pop(random_number_index)
-    answer_list[0] = 'no'
+    NUMBERS_LIST.pop(random_number_index)
+    ANSWER_LIST[0] = 'no'
     return random_number

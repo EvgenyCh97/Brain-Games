@@ -1,7 +1,7 @@
 from random import randint
 
-rules = 'What number is missing in the progression?'
-answer_list = ['']
+RULES = 'What number is missing in the progression?'
+ANSWER_LIST = ['']
 
 
 def get_progression_list():
@@ -18,7 +18,7 @@ def get_progression_list():
 def task():
     progression_list = get_progression_list()
     random_number_from_list = randint(0, len(progression_list) - 1)
-    answer_list[0] = progression_list[random_number_from_list]
+    ANSWER_LIST[0] = progression_list[random_number_from_list]
     progression_list[random_number_from_list] = '..'
     result = ''
     for char in progression_list:

@@ -1,17 +1,17 @@
 from random import randint
 
-answer_list = ['']
-rules = 'Answer "yes" if the number is even, otherwise answer "no".'
-numbers_list = list(range(1, 21))
+ANSWER_LIST = ['']
+RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
+NUMBERS_LIST = list(range(1, 21))
 
 
 def task():
-    random_number_index = randint(0, len(numbers_list) - 1)
-    random_number = numbers_list[random_number_index]
+    random_number_index = randint(0, len(NUMBERS_LIST) - 1)
+    random_number = NUMBERS_LIST[random_number_index]
     if random_number % 2 == 0:
-        answer_list[0] = 'yes'
-        numbers_list.pop(random_number_index)
+        ANSWER_LIST[0] = 'yes'
+        NUMBERS_LIST.pop(random_number_index)
     else:
-        answer_list[0] = 'no'
-        numbers_list.pop(random_number_index)
+        ANSWER_LIST[0] = 'no'
+        NUMBERS_LIST.pop(random_number_index)
     return random_number
