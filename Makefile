@@ -31,5 +31,9 @@ package-install:
 lint:
 	poetry run flake8 brain_games
 
-reinstall:
+reinstall: build publish package-install
 	pip install --user dist/*.whl --force-reinstall
+
+full-reinstall: build publish package-install reinstall
+
+.PHONY: install build publish lint reinstall
