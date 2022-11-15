@@ -1,13 +1,12 @@
 import prompt
 
-NUMBER_OF_ROUNDS = 3
-
 
 def logic(RULES, task, ANSWER_LIST):
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
     print(RULES)
+    NUMBER_OF_ROUNDS = 3
     while NUMBER_OF_ROUNDS != 0:
         print(f'Question: {task()}')
         your_answer = prompt.string('Your answer: ')
