@@ -1,5 +1,4 @@
 from random import randint
-from brain_games.logic.game_logic import logic
 
 answer_list = ['']
 rules = 'Answer "yes" if the number is even, otherwise answer "no".'
@@ -16,7 +15,3 @@ def task():
         answer_list[0] = 'no'
         numbers_list.pop(random_number_index)
     return random_number
-
-
-def game():
-    logic(rules, task, answer_list)
