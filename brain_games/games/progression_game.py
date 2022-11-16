@@ -13,8 +13,8 @@ def get_progression_list():
     list_of_numbers = []
     index = 0
     while len(list_of_numbers) != number_of_digits:
-        progression_element = start_of_progression + index * arithmetic_difference
-        list_of_numbers.append(progression_element)
+        element = start_of_progression + index * arithmetic_difference
+        list_of_numbers.append(element)
         index += 1
     result_list = list(map(str, list_of_numbers))
     return result_list
