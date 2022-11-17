@@ -2,18 +2,20 @@ from random import randint
 
 RULES = 'What number is missing in the progression?'
 ANSWER_LIST = ['']
-MINIMUM_ARITHMETIC_DIFFERENCE = 1
-MINIMUM_NUMBER_OF_DIGITS = 5
+MIN_ARITHMETIC_DIFFERENCE = 1
+MAX_ARITHMETIC_DIFFERENCE = 4
+MIN_NUMBER_OF_DIGITS = 5
+MAX_NUMBER_OF_DIGITS = 10
 
 
 def get_progression_list():
-    number_of_digits = MINIMUM_NUMBER_OF_DIGITS + randint(0, 5)
-    arithmetic_difference = MINIMUM_ARITHMETIC_DIFFERENCE + randint(1, 3)
+    step = randint(MIN_ARITHMETIC_DIFFERENCE, MAX_ARITHMETIC_DIFFERENCE)
+    number_of_digits = randint(MIN_NUMBER_OF_DIGITS, MAX_NUMBER_OF_DIGITS)
     start_of_progression = randint(0, 100)
     list_of_numbers = []
     index = 0
     while len(list_of_numbers) != number_of_digits:
-        element = start_of_progression + index * arithmetic_difference
+        element = start_of_progression + index * step
         list_of_numbers.append(element)
         index += 1
     result_list = list(map(str, list_of_numbers))
