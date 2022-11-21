@@ -1,4 +1,5 @@
 import prompt
+NUMBER_OF_ROUNDS = 3
 
 
 def logic(RULES, task, ANSWER_LIST):
@@ -6,13 +7,13 @@ def logic(RULES, task, ANSWER_LIST):
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
     print(RULES)
-    NUMBER_OF_ROUNDS = 3
-    while NUMBER_OF_ROUNDS != 0:
+    round = NUMBER_OF_ROUNDS
+    while round != 0:
         print(f'Question: {task()}')
         your_answer = prompt.string('Your answer: ')
         if your_answer == ANSWER_LIST[0]:
             print('Correct!')
-            NUMBER_OF_ROUNDS -= 1
+            round -= 1
         else:
             print(f'"{your_answer}" is wrong answer ;(.'
                   f' Correct answer was "{ANSWER_LIST[0]}".'
