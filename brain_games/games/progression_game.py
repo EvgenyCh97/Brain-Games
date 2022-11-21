@@ -23,7 +23,7 @@ def get_progression_list():
     return result_list
 
 
-def task():
+def get_task_and_answer():
     progression_list = get_progression_list()
     random_number_from_list = randint(0, len(progression_list) - 1)
     correct_answer = progression_list[random_number_from_list]

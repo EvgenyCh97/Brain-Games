@@ -9,7 +9,7 @@ def logic(game_module):
     print(game_module.RULES)
     round = NUMBER_OF_ROUNDS
     while round != 0:
-        (question, correct_answer) = game_module.task()
+        (question, correct_answer) = game_module.get_task_and_answer()
         print(f'Question: {question}')
         your_answer = prompt.string('Your answer: ')
         if your_answer == correct_answer:

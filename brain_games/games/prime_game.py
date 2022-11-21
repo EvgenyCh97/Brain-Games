@@ -5,7 +5,7 @@ MIN_GIVEN_NUMBER = 1
 MAX_GIVEN_NUMBER = 20
 
 
-def task():
+def get_task_and_answer():
     random_number = randint(MIN_GIVEN_NUMBER, MAX_GIVEN_NUMBER)
     divisor = 2
     if random_number == 1:
