@@ -2,7 +2,7 @@ import prompt
 NUMBER_OF_ROUNDS = 3
 
 
-def logic(game_module):
+def run_game_engine(game_module):
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
