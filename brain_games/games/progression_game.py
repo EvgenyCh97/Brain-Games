@@ -1,7 +1,6 @@
 from random import randint
 
 RULES = 'What number is missing in the progression?'
-ANSWER_LIST = ['']
 MIN_ARITHMETIC_DIFFERENCE = 1
 MAX_ARITHMETIC_DIFFERENCE = 4
 MIN_NUMBER_OF_DIGITS = 5
@@ -27,12 +26,12 @@ def get_progression_list():
 def task():
     progression_list = get_progression_list()
     random_number_from_list = randint(0, len(progression_list) - 1)
-    ANSWER_LIST[0] = progression_list[random_number_from_list]
+    correct_answer = progression_list[random_number_from_list]
     progression_list[random_number_from_list] = '..'
-    result = ''
+    question = ''
     for char in progression_list:
         if char == progression_list[len(progression_list) - 1]:
-            result += char
+            question += char
         else:
-            result += char + ' '
-    return result
+            question += char + ' '
+    return (question, correct_answer)
