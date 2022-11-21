@@ -6,12 +6,14 @@ MIN_ARITHMETIC_DIFFERENCE = 1
 MAX_ARITHMETIC_DIFFERENCE = 4
 MIN_NUMBER_OF_DIGITS = 5
 MAX_NUMBER_OF_DIGITS = 10
+RANGE_START = 0
+RANGE_END = 100
 
 
 def get_progression_list():
     step = randint(MIN_ARITHMETIC_DIFFERENCE, MAX_ARITHMETIC_DIFFERENCE)
     number_of_digits = randint(MIN_NUMBER_OF_DIGITS, MAX_NUMBER_OF_DIGITS)
-    start_of_progression = randint(0, 100)
+    start_of_progression = randint(RANGE_START, RANGE_END)
     list_of_numbers = []
     index = 0
     while len(list_of_numbers) != number_of_digits:
