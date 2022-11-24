@@ -1,12 +1,12 @@
 from random import randint
 
 RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-MIN_GIVEN_NUMBER = 1
-MAX_GIVEN_NUMBER = 20
+MIN_NUMBER = 1
+MAX_NUMBER = 20
 
 
 def get_task_and_answer():
-    random_number = randint(MIN_GIVEN_NUMBER, MAX_GIVEN_NUMBER)
+    random_number = randint(MIN_NUMBER, MAX_NUMBER)
     divisor = 2
     if random_number == 1:
         return (random_number, 'no')
