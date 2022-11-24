@@ -7,14 +7,14 @@ def run_game_engine(game_module):
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
     print(game_module.RULES)
-    round = NUMBER_OF_ROUNDS
-    while round != 0:
+    current_round = 0
+    while current_round != NUMBER_OF_ROUNDS:
         (question, correct_answer) = game_module.get_task_and_answer()
         print(f'Question: {question}')
         your_answer = prompt.string('Your answer: ')
         if your_answer == correct_answer:
             print('Correct!')
-            round -= 1
+            current_round += 1
         else:
             print(f'"{your_answer}" is wrong answer ;(.'
                   f' Correct answer was "{correct_answer}".'
