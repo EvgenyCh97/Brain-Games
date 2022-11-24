@@ -14,8 +14,7 @@ def get_progression_list():
     number_of_digits = randint(MIN_NUMBER_OF_DIGITS, MAX_NUMBER_OF_DIGITS)
     start_of_progression = randint(RANGE_START, RANGE_END)
     list_of_numbers = []
-    index = 0
-    while len(list_of_numbers) != number_of_digits:
+    for index in range(number_of_digits):
         element = start_of_progression + index * step
         list_of_numbers.append(element)
         index += 1
