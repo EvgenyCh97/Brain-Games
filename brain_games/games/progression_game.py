@@ -9,10 +9,7 @@ RANGE_START = 0
 RANGE_END = 100
 
 
-def get_progression_list():
-    step = randint(MIN_ARITHMETIC_DIFFERENCE, MAX_ARITHMETIC_DIFFERENCE)
-    number_of_digits = randint(MIN_NUMBER_OF_DIGITS, MAX_NUMBER_OF_DIGITS)
-    start_of_progression = randint(RANGE_START, RANGE_END)
+def get_progression_list(step, number_of_digits, start_of_progression):
     list_of_numbers = []
     for index in range(number_of_digits):
         element = start_of_progression + index * step
@@ -23,14 +20,12 @@ def get_progression_list():
 
 
 def get_task_and_answer():
-    progression_list = get_progression_list()
+    step = randint(MIN_ARITHMETIC_DIFFERENCE, MAX_ARITHMETIC_DIFFERENCE)
+    number_of_digits = randint(MIN_NUMBER_OF_DIGITS, MAX_NUMBER_OF_DIGITS)
+    start = randint(RANGE_START, RANGE_END)
+    progression_list = get_progression_list(step, number_of_digits, start)
     random_number_from_list = randint(0, len(progression_list) - 1)
     correct_answer = progression_list[random_number_from_list]
     progression_list[random_number_from_list] = '..'
-    question = ''
-    for char in progression_list:
-        if char == progression_list[len(progression_list) - 1]:
-            question += char
-        else:
-            question += char + ' '
+    question = ' '.join(progression_list)
     return (question, correct_answer)
