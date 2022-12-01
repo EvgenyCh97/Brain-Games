@@ -5,13 +5,17 @@ MIN_NUMBER = 1
 MAX_NUMBER = 20
 
 
+def is_prime(number):
+    divisor = 2
+    if number == 1:
+        return (number, 'no')
+    while number % divisor != 0:
+        divisor += 1
+    if divisor == number:
+        return (number, 'yes')
+    return (number, 'no')
+
+
 def get_task_and_answer():
     random_number = randint(MIN_NUMBER, MAX_NUMBER)
-    divisor = 2
-    if random_number == 1:
-        return (random_number, 'no')
-    while random_number % divisor != 0:
-        divisor += 1
-    if divisor == random_number:
-        return (random_number, 'yes')
-    return (random_number, 'no')
+    return is_prime(random_number)
