@@ -15,6 +15,6 @@ def is_even(number):
 def get_task_and_answer():
     random_number = randint(MIN_NUMBER, MAX_NUMBER)
     if is_even(random_number):
-        return (random_number, 'yes')
+        return (str(random_number), 'yes')
     else:
-        return (random_number, 'no')
+        return (str(random_number), 'no')
