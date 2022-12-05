@@ -6,7 +6,7 @@ def run_game_engine(game_module):
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
-    print(game_module.RULES)
+    print(game_module.DESCRIPTION)
     current_round = 1
     while current_round <= NUMBER_OF_ROUNDS:
         (question, correct_answer) = game_module.get_task_and_answer()

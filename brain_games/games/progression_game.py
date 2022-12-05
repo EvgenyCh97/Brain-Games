@@ -1,6 +1,6 @@
 from random import randint
 
-RULES = 'What number is missing in the progression?'
+DESCRIPTION = 'What number is missing in the progression?'
 MIN_ARITHMETIC_DIFFERENCE = 1
 MAX_ARITHMETIC_DIFFERENCE = 4
 MIN_NUMBER_OF_DIGITS = 5
