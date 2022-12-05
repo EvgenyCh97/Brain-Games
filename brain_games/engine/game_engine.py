@@ -7,8 +7,8 @@ def run_game_engine(game_module):
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
     print(game_module.RULES)
-    current_round = 0
-    while current_round != NUMBER_OF_ROUNDS:
+    current_round = 1
+    while current_round <= NUMBER_OF_ROUNDS:
         (question, correct_answer) = game_module.get_task_and_answer()
         print(f'Question: {question}')
         your_answer = prompt.string('Your answer: ')
