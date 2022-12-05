@@ -8,14 +8,17 @@ MAX_NUMBER = 20
 def is_prime(number):
     divisor = 2
     if number == 1:
-        return (number, 'no')
+        return False
     while number % divisor != 0:
         divisor += 1
     if divisor == number:
-        return (number, 'yes')
-    return (number, 'no')
+        return True
+    return False
 
 
 def get_task_and_answer():
     random_number = randint(MIN_NUMBER, MAX_NUMBER)
-    return is_prime(random_number)
+    if is_prime(random_number):
+        return (str(random_number), 'yes')
+    else:
+        return (str(random_number), 'no')
