@@ -10,13 +10,9 @@ RANGE_END = 100
 
 
 def get_progression_list(step, number_of_digits, start_of_progression):
-    list_of_numbers = []
-    for index in range(number_of_digits):
-        element = start_of_progression + index * step
-        list_of_numbers.append(element)
-        index += 1
-    result_list = list(map(str, list_of_numbers))
-    return result_list
+    stop = start_of_progression + (number_of_digits * step)
+    numbers_list = range(start_of_progression, stop, step)
+    return list(map(str, numbers_list))
 
 
 def get_task_and_answer():
