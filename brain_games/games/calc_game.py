@@ -21,6 +21,6 @@ def get_task_and_answer():
     elif operator == sub:
         question = f'{first_number} - {second_number}'
         return (question, result)
-    else:
+    elif operator == mul:
         question = f'{first_number} * {second_number}'
         return (question, result)
