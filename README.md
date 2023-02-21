@@ -2,7 +2,7 @@
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/EvgenyCh97/python-project-49/workflows/hexlet-check/badge.svg)](https://github.com/EvgenyCh97/python-project-49/actions)
-[![Maintainability](https://api.codeclimate.com/v1/badges/5e46220ca63e9e0040d1/maintainability)](https://codeclimate.com/github/EvgenyCh97/python-project-49/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/ee9371a3a5dce858011b/maintainability)](https://codeclimate.com/github/EvgenyCh97/Brain-Games/maintainability)
 
 ### Description
 Brain Games is a game where you have to test your math skills. The game consists of 5 different math mini games. In each you have to give 3 correct answers to win. If the answer is wrong, the game will be over.
